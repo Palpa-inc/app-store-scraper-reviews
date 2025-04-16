@@ -17,6 +17,12 @@ export interface Review {
   attributes: Attributes;
 }
 
+export interface DeveloperResponse {
+  id: number;
+  body: string;
+  modified: string;
+}
+
 export interface Attributes {
   date: string;
   review: string;
@@ -24,4 +30,5 @@ export interface Attributes {
   isEdited: boolean;
   title: string;
   userName: string;
+  developerResponse?: DeveloperResponse;
 }

@@ -1,8 +1,11 @@
 {
-  "name": "app-store-scraper-reviews",
-  "version": "1.0.1",
-  "description": "Scrape reviews from the app store",
+  "name": "@Palpa-inc/app-store-scraper-reviews-reply",
+  "version": "1.0.2",
+  "description": "Scrape reviews (including developer replies) from the app store",
   "main": "dist/index.js",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "build": "rimraf ./dist && tsc",
     "prepare": "npm run build",
@@ -32,7 +35,7 @@
     "typescript": "5.0.4"
   },
   "dependencies": {
-    "cheerio": "1.0.0-rc.12",
+    "cheerio": "^1.0.0",
     "node-fetch": "2.6.9"
   }
 }

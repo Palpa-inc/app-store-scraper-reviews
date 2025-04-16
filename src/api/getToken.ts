@@ -1,5 +1,5 @@
-import fetch from 'node-fetch';
-import cheerio from 'cheerio';
+import fetch from "node-fetch";
+import * as cheerio from "cheerio";
 
 export async function getToken({
   country,
@@ -21,7 +21,7 @@ export async function getToken({
   const $ = cheerio.load(html);
   const metaConfigContent = $(
     'meta[name="web-experience-app/config/environment"]'
-  ).attr('content');
+  ).attr("content");
   const metaObject = JSON.parse(decodeURIComponent(metaConfigContent!));
   const token = metaObject.MEDIA_API.token;
 
